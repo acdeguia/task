@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Header from "../utils/Header";
 
 function Api() {
     const [data, setData] = useState([]);
@@ -90,7 +91,7 @@ function Api() {
     <>
      
       <div className="filter-container">
-
+<Header/>
       <div className="region-container">
           <label htmlFor="filterRegion">Region:</label>
           <select
