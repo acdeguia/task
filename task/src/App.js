@@ -1,11 +1,17 @@
-import Api from "./components/Api";
+
 import Footer from "./utils/Footer";
+
+import Api from "./components/Api";
+
 function App() {
+  
   return (
-    <div className="App">
-      <Api/>
-      <Footer/>
-    </div>
+
+    <>
+  
+      < Api/>
+      <Footer className="footer"/>
+    </>
   );
 }
 
