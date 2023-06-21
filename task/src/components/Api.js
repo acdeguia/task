@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Header from "../utils/Header";
 
 function Api() {
-    const [data, setData] = useState([]);
+  const [data, setData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [countriesPerPage] = useState(50);
@@ -87,12 +87,10 @@ function Api() {
   };
 
   return (
-
     <>
-     
       <div className="filter-container">
-<Header/>
-      <div className="region-container">
+        <Header />
+        <div className="region-container">
           <label htmlFor="filterRegion">Region:</label>
           <select
             id="filterRegion"
@@ -110,7 +108,6 @@ function Api() {
         </div>
 
         <div className="toggle-container">
-
           <label htmlFor="filterArea">Filter area smaller than Lithuania</label>
           <input
             className="toggle-input"
@@ -121,8 +118,6 @@ function Api() {
             onChange={handleInputChange}
           />
         </div>
-
-       
       </div>
 
       <main>
@@ -148,7 +143,7 @@ function Api() {
 
       <div className="page-container">
         <button onClick={handlePrevClick} disabled={currentPage === 1}>
-        &laquo;
+          &laquo;
         </button>
         <div>
           {pageNumbers.map((pageNumber) => (
@@ -167,11 +162,11 @@ function Api() {
           onClick={handleNextClick}
           disabled={currentPage === pageNumbers.length}
         >
-         &raquo;
+          &raquo;
         </button>
       </div>
     </>
   );
 }
 
-export default Api
+export default Api;
