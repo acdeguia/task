@@ -6,6 +6,8 @@ function Api() {
   const [filteredData, setFilteredData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [countriesPerPage] = useState(50);
+  const [sortOrder, setSortOrder] = useState("asc");
+
   const [filterCriteria, setFilterCriteria] = useState({
     areaSmallerThanLithuania: false,
     region: "",
@@ -86,10 +88,24 @@ function Api() {
     setFilterCriteria(updatedFilterCriteria);
   };
 
+  const handleSort = () => {
+    const sortedData = [...filteredData].sort((a, b) => {
+      if (sortOrder === "asc") {
+        return a.name.localeCompare(b.name);
+      } else {
+        return b.name.localeCompare(a.name);
+      }
+    });
+    setFilteredData(sortedData);
+    setSortOrder(sortOrder === "asc" ? "desc" : "asc");
+  };
+
   return (
     <>
+     <Header />
       <div className="filter-container">
-        <Header />
+       
+        
         <div className="region-container">
           <label htmlFor="filterRegion">Region:</label>
           <select
@@ -117,6 +133,10 @@ function Api() {
             checked={filterCriteria.areaSmallerThanLithuania}
             onChange={handleInputChange}
           />
+        </div>
+        <div className="toggle-container">
+          <label htmlFor="sort">Sort Ascending/Descending</label>
+          <input id="sort" className="toggle-input" type="checkbox" onClick={handleSort} />
         </div>
       </div>
 

@@ -18,7 +18,7 @@ code {
     monospace;
 }
 
-.filter-container, .filter-container > div, .pages, .page-container, .page-container > div, .toggle-container, .region-container, body, #root, footer {
+.filter-container, .filter-container > div, .pages, .page-container, .page-container > div, .toggle-container, .region-container, body, #root, footer, #logo {
   display: flex;
 }
 
@@ -79,7 +79,7 @@ tr:hover {
 }
 
 main {
-  max-height: 600px;
+  max-height: 700px;
   overflow-y: scroll;
   margin-top: 20px;
 }
@@ -144,4 +144,8 @@ padding: 25px 0;
 .logo {
   width: 154px;
   height: auto;
+}
+
+#logo {
+justify-content: center;
 }
