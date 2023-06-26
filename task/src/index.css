@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   padding: 20px 100px;
+  color: #191919;
 }
 
 #root, body {
@@ -148,4 +149,8 @@ padding: 25px 0;
 
 #logo {
 justify-content: center;
+}
+
+.sort-btn:hover {
+  background-color: #00eb3c;
 }

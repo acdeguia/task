@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Header from "../utils/Header";
 
 function Api() {
   const [data, setData] = useState([]);
@@ -102,7 +101,6 @@ function Api() {
 
   return (
     <>
-     <Header />
       <div className="filter-container">
        
         
@@ -135,8 +133,7 @@ function Api() {
           />
         </div>
         <div className="toggle-container">
-          <label htmlFor="sort">Sort Ascending/Descending</label>
-          <input id="sort" className="toggle-input" type="checkbox" onClick={handleSort} />
+          <button className="sort-btn" onClick={handleSort}>Sort either Ascending/Descending</button>
         </div>
       </div>
 
