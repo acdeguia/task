@@ -1,7 +1,5 @@
 # Country Visualization App
 
-➠ [View Live Demo](https://acdeguia.github.io/task/)
-
 This README file provides documentation for a React.js application that uses the free API from restcountries.com to visualize country data. The application displays country names, regions, and area sizes. The data is fetched from the API endpoint https://restcountries.com/v2/all?fields=name,region,area to retrieve only the necessary data fields.
 
 ## Requirements
